@@ -7,7 +7,7 @@ import sys
 timestr = time.strftime("%Y-%m-%d %H:%M:%S")
 
 
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
  
 if (cap.isOpened() == False): 
   print("Unable to read camera feed")
