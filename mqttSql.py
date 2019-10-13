@@ -51,7 +51,7 @@ def on_message_on(client, userData, message):
   if(receivedMessage > '0'):
   	dataFinger = receivedMessage
   	print("Sending: " + dataFinger)
-  	sock.sendall(dataFinger.encode('utf-8'))
+  	sock.sendall(dataFinger.encode(encoding="utf-8", errors="strict"))
   elif(receivedMessage == 'Initializing'):
   	print("Initializing, try again")
 
