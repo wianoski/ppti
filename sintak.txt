@@ -1,0 +1,1 @@
+CREATE TABLE `fingerLog`( `finger_id` INT(11) NOT NULL AUTO_INCREMENT, `finger_number` VARCHAR(21) NOT NULL, `finger_time` TIMESTAMP NOT NULL, PRIMARY KEY(`finger_id`) )
