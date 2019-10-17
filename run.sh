@@ -1,1 +1,1 @@
-python3 camTrig.py
+python3 mqttTrig.py
