@@ -41,9 +41,11 @@ def on_message_on(client, userData, message):
   # print("Message: ", message.topic , " - qos=", message.qos , " - flag=", message.retain)
   receivedMessage = str(message.payload.decode("utf-8"))
 
-  founds = receivedMessage == "found_jari"
+  founds = receivedMessage > '0'
   foundPir = receivedMessage == "1"
-  if (founds):
+  if (receivedMessage == 'Initializing'):
+    print("Failed, Try again")
+  elif (founds):
       print(receivedMessage)    
       os.system('python3 camTrig.py')
       

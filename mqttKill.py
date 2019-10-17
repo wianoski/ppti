@@ -7,7 +7,7 @@ import os
 from subprocess import check_call
 
 # mqtt://broker.hivemq.com 
-brokerHost = "broker.hivemq.com"
+brokerHost = "10.30.40.23"
 port = 1883
 
 # topic1 = "pir/pirOn"
@@ -42,7 +42,9 @@ def on_message_on(client, userData, message):
   # print("Message: ", message.topic , " - qos=", message.qos , " - flag=", message.retain)
   receivedMessage = str(message.payload.decode("utf-8"))
 
-  if(receivedMessage == "found_jari_keluar"):
+  if (receivedMessage == 'Initializing'):
+    print("Error, Try again")
+  elif(receivedMessage == "found_jari_keluar"):
     os.system('python3 killTrig.py')
     print("received message = " , receivedMessage)
 
