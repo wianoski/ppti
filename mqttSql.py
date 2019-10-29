@@ -18,7 +18,7 @@ server_address = (host, 3040)
 # server_address = ('localhost', 3040)
 print("----------------------Sesi MQTT------------------------")
 print('connecting to {} port {}'.format(*server_address))
-# sock.connect(server_address)
+sock.connect(server_address)
 
 #-------------------------Sesi berhenti sejenak------------------------
 
@@ -68,7 +68,7 @@ def on_message_on(client, userData, message):
   elif(receivedMessage > '0'):
   	dataFinger = receivedMessage
   	print("Sending: " + dataFinger)
-  	# sock.sendall(dataFinger.encode(encoding="utf-8", errors="strict"))
+  	sock.sendall(dataFinger.encode(encoding="utf-8", errors="strict"))
 
 
 

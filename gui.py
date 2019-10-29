@@ -18,13 +18,13 @@ ard = serial.Serial(port, 57600, timeout=1)
 
 
 def command2():
-    messagebox.showinfo('Finger system', 'Letakkan jari anda')
+    messagebox.showinfo('Finger system', 'Tekan OK, lalu letakkan jari anda!')
     inputs = 2
     ard.write(str(inputs).encode())
     while True:
         msg = ard.readline().decode('ascii')
         print(msg)
-        time.sleep(10)
+        time.sleep(5)
         break
         
 

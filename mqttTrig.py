@@ -15,7 +15,7 @@ port = 1883
 
 topic1 = "pir/pirOn"
 topic2 = "pir/pirOff"
-topic3 = "found/data"
+topic3 = "finger/found"
 
 subTopic1 = topic1
 subTopic2 = topic2
